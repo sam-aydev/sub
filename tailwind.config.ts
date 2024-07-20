@@ -14,6 +14,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "hero-pattern": "url('/bg-1.jpg')",
+        hero: "url('/bg_new.jpg')",
       },
     },
   },

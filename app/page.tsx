@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div>
       <div></div>
-      <div className="bg-[#333333] px-7 pt-10 pb-36 md:flex md:px-14 md:space-x-8">
+      <div className="bg-[#333333] bg-cover  bg-black/90 bg-blend-overlay opacity-85 bg-fixed  bg-no-repeat  bg-hero h-[500px] md:h-[600px] px-7 pt-10 pb-36 md:flex md:px-14 md:space-x-8">
         <div className="md:w-[45%]">
           <h2 className="text-4xl text-white  font-extrabold md:text-5xl">
             PROMOTE YOUR BUSINESS TO 100,000+ PEOPLE
@@ -173,7 +173,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-[550px] md:mt-[100px] w-full ">
+      <div className="mt-[100px] w-full ">
         <div className="bg-cover  bg-black/90 bg-blend-overlay opacity-85 bg-fixed  bg-no-repeat h-[2300px] bg-hero-pattern md:h-[900px]">
           <div className="md:pt-5">
             <p className=" text-center text-4xl text-white  font-extrabold">
@@ -634,24 +634,24 @@ export default function Home() {
             <Image src={img7} width={600} height={400} alt="faq" />
           </div>
           <div className="md:w-[50%]">
-            <div className="w-5/6 mx-auto ">
+            <div className="w-5/6 mx-auto group">
               <h2
                 style={{
                   background:
                     "linear-gradient(45deg, rgba(250, 198, 37, 0.9), rgba(244, 151, 7, 0.9))",
                 }}
-                className=" py-4 text-xl text-white font-semibold px-3"
+                className=" py-4 text-xl text-white font-semibold px-3  "
               >
                 How Authentic is your Database?
               </h2>
-              <p className="bg-slate-50 mt-3 px-3 pt-2  font-bold">
+              <p className="bg-slate-50 mt-3 px-3 pt-2  font-bold duration-500 transition-all cursor-pointer hidden group-hover:block group-active:block ">
                 We have collected this data from various sources and the
                 Internet and the accuracy varies as per the category and source.
                 But we always give you the latest. We usualy hit an accuracy of
                 80% to 90% and same customers have bought from us repeatedly.
               </p>
             </div>
-            <div className="w-5/6 mx-auto mt-4 ">
+            <div className="w-5/6 mx-auto mt-4 group">
               <h2
                 style={{
                   background:
@@ -661,7 +661,7 @@ export default function Home() {
               >
                 Can we use your Data for spamming or Unsolicited phone calls?
               </h2>
-              <p className="bg-slate-50 mt-3 px-3 pt-2  font-bold">
+              <p className="bg-slate-50 mt-3 px-3 pt-2  font-bold duration-500 transition-all cursor-pointer hidden group-hover:block group-active:block">
                 No, our data is for Business promotion purpose only. You can not
                 send Unsolicited emails to these data. Please note that you are
                 responsible for usage of these data. We will not be held
@@ -671,7 +671,7 @@ export default function Home() {
                 action against the USER (i.e. you).
               </p>
             </div>
-            <div className="w-5/6 mx-auto mt-4 ">
+            <div className="w-5/6 mx-auto mt-4 group">
               <h2
                 style={{
                   background:
@@ -681,12 +681,12 @@ export default function Home() {
               >
                 Can you Provide me some Sample Database ?
               </h2>
-              <p className="bg-slate-50 mt-3 px-3 pt-2  font-bold">
+              <p className="bg-slate-50 mt-3 px-3 pt-2  font-bold duration-500 transition-all cursor-pointer hidden group-hover:block group-active:block">
                 We try as much as possible not to disturb our leads. This also
                 helps maintain the freshness and authenticity of our data
               </p>
             </div>
-            <div className="w-5/6 mx-auto mt-4 ">
+            <div className="w-5/6 mx-auto mt-4 group">
               <h2
                 style={{
                   background:
@@ -696,7 +696,7 @@ export default function Home() {
               >
                 After payment, when will I receive the database?
               </h2>
-              <p className="bg-slate-50 mt-3 px-3 pt-2  font-bold">
+              <p className="bg-slate-50 mt-3 px-3 pt-2  font-bold duration-500 transition-all cursor-pointer hidden group-hover:block group-active:block">
                 Just inform us after you've made the payment. Once it's credited
                 to our account, you will receive the data within 24 hours.
               </p>
