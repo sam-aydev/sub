@@ -150,8 +150,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="pt-96  ">
-        <div className="bg-cover  bg-black/90 bg-blend-overlay opacity-85 bg-fixed  bg-no-repeat h-[1900px] bg-hero-pattern">
+      <div className="mt-[640px]  ">
+        <div className="bg-cover  bg-black/90 bg-blend-overlay opacity-85 bg-fixed  bg-no-repeat h-[2300px] bg-hero-pattern">
           <div>
             <p className=" text-center text-4xl text-white  font-extrabold">
               AMAZING<span className="text-[#FFC600]"> FEATURES</span>
@@ -323,7 +323,7 @@ export default function Home() {
       </div>
 
       <div className="mt-16 relative group">
-        <div className="bg-[#FFC600] transition-all duration-500 group-hover:rotate-90   text-white w-5/6 mx-auto px-20 h-72 py-10">
+        <div className="bg-[#FFC600] transition-all duration-500 group-hover:rotate-[360deg]   text-white w-5/6 mx-auto px-4 h-96 py-10">
           <p className="text-2xl">
             E = MC^2 THAT WAS EINSTEIN FORMULA.{" "}
             <span className="font-bold">
@@ -332,7 +332,7 @@ export default function Home() {
           </p>
           <p className="font-bold mt-4 text-2xl">THIS IS LEADPLUS FORMULA</p>{" "}
         </div>
-        <div className="bg-white h-72 absolute transition-all duration-1000 -bottom-52 hidden  group-hover:block group-hover:bg-[#FFC600]  group-hover:bottom-0 right-0 left-0   text-white w-5/6 mx-auto px-20 py-10">
+        <div className="bg-white  absolute transition-all duration-1000 -bottom-52 hidden  group-hover:block group-hover:bg-[#FFC600]  group-hover:bottom-0 right-0 left-0   text-white w-5/6 mx-auto px-4 h-96 py-10">
           <p className="text-2xl font-bold text-center mt-10">
             BEHIND EVERY SUCCESSFUL MAN THERE IS A DIGITAL MARKETING BUSINESS
           </p>
@@ -340,7 +340,7 @@ export default function Home() {
       </div>
 
       <div className="mt-20  ">
-        <div className="bg-cover  bg-black/90 bg-blend-overlay opacity-85 bg-fixed  bg-no-repeat h-[300px] bg-hero-pattern">
+        <div className="bg-cover  bg-black/90 bg-blend-overlay opacity-85 bg-fixed  bg-no-repeat h-[550px] bg-hero-pattern">
           <div>
             <p className="text-white text-4xl text-center pt-10 font-bold w-5/6 mx-auto ">
               Increase Your Sales Using Bulk Marketing, Viral Marketing, and
@@ -672,8 +672,8 @@ export default function Home() {
         </form>
       </div>
 
-      <div className="pt-10 pb-5 text-center font-bold text-lg">
-        <div className="flex justify-center  space-x-5">
+      <div className="pt-10 pb-5 text-center font-bold text-lg w-full">
+        <div className="">
           <p>vimal.leadplus@gmail.com</p>
           <p>+91 7354939792</p>
         </div>
