@@ -20,12 +20,14 @@ import { HiBars3 } from "react-icons/hi2";
 import Logo from "@/public/logo-latest-new.png";
 import { BiPlus } from "react-icons/bi";
 import { useState } from "react";
+import { HiX } from "react-icons/hi";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <div className="bg-[#333333] bg-cover  bg-black/90 bg-blend-overlay opacity-85 bg-fixed  bg-no-repeat  bg-hero h-[600px] md:h-[650px] px-7 pt-4 pb-36 ">
+        {/* for mobile and desktop expecially */}
         <div className="flex justify-between items-center  md:px-10">
           <div className="md:w-[40%]">
             <Image
@@ -73,7 +75,7 @@ export default function Home() {
           </div>
 
           <div
-            onClick={() => setIsOpen((open) => !open)}
+            onClick={() => setIsOpen(true)}
             className="md:hidden text-white "
           >
             <HiBars3 className="size-8" />
@@ -100,10 +102,10 @@ export default function Home() {
                   />
                 </div>
                 <div
-                  onClick={() => setIsOpen((open) => !open)}
+                  onClick={() => setIsOpen(false)}
                   className="md:hidden text-black "
                 >
-                  <HiBars3 className="size-8" />
+                  <HiX className="size-8" />
                 </div>
               </div>
               <ul className="flex justify-end absolute right-0 flex-col ">
