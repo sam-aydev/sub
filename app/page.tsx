@@ -16,27 +16,146 @@ import img5 from "@/public/thinking.png";
 import img6 from "@/public/disk.png";
 import img7 from "@/public/FAQ.png";
 import img8 from "@/public/Like_A_Boss_Logo_04.png";
+import { HiBars3 } from "react-icons/hi2";
+import Logo from "@/public/logo-latest-new.png";
+import { BiPlus } from "react-icons/bi";
+import { useState } from "react";
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <div></div>
-      <div className="bg-[#333333] bg-cover  bg-black/90 bg-blend-overlay opacity-85 bg-fixed  bg-no-repeat  bg-hero h-[500px] md:h-[600px] px-7 pt-10 pb-36 md:flex md:px-14 md:space-x-8">
-        <div className="md:w-[45%]">
-          <h2 className="text-4xl text-white  font-extrabold md:text-5xl">
-            PROMOTE YOUR BUSINESS TO 100,000+ PEOPLE
-          </h2>
-          <p className=" text-3xl font-neon font-bold text-[#FFC600] mt-9">
-            Launch "bulk marketing" campaign in a few simple steps.
-          </p>
-          <button className="bg-[#FFC600]  px-4 py-2 rounded-full mt-5 font-semibold hover:bg-white">
-            Get Leads
-          </button>
+      <div className="bg-[#333333] bg-cover  bg-black/90 bg-blend-overlay opacity-85 bg-fixed  bg-no-repeat  bg-hero h-[600px] md:h-[650px] px-7 pt-4 pb-36 ">
+        <div className="flex justify-between items-center  md:px-10">
+          <div className="md:w-[40%]">
+            <Image
+              src={Logo}
+              width={700}
+              height={300}
+              alt="logo"
+              className="w-64"
+            />
+          </div>
+          <div className=" text-black md:text-white md:bg-transparent  bg-white p-2 rounded-xl hidden md:block ">
+            <ul className="md:flex md:justify-between md:space-x-6 md:items-center ">
+              <li className="md:hover:border-y-2 md:hover:border-y-white mt-4 flex items-center  py-3 hover:border-b-2 hover:border-b-white hover:text-[#FCC600]">
+                {" "}
+                B2B & B2C MARKETING{" "}
+                <span>
+                  <BiPlus className="size-5 ml-2" />{" "}
+                </span>
+              </li>
+              <li className="hover:text-[#FCC600] flex items-center mt-4 py-3 hover:border-y-2 hover:border-y-white">
+                PPC ADS{" "}
+                <span>
+                  <BiPlus className="size-5 ml-2" />{" "}
+                </span>{" "}
+              </li>
+              <li className="hover:text-[#FCC600] flex items-center mt-4 py-3 hover:border-y-2 hover:border-y-white">
+                GOOGLE REVIEWS{" "}
+                <span>
+                  <BiPlus className="size-5 ml-2" />{" "}
+                </span>{" "}
+              </li>
+              <li className="hover:text-[#FCC600] flex items-center mt-4 py-3 hover:border-y-2 hover:border-y-white">
+                PRICING{" "}
+                <span>
+                  <BiPlus className="size-5 ml-2" />{" "}
+                </span>{" "}
+              </li>
+              <li className="hover:text-[#FCC600]  md:hover:border-y-2 md:hover:border-y-white flex items-center mt-4 py-3 border-t-2 border-t-[#FCC600] md:border-t-0">
+                CONTACT{" "}
+                <span>
+                  <BiPlus className="size-5 ml-2" />{" "}
+                </span>{" "}
+              </li>
+            </ul>
+          </div>
+
+          <div
+            onClick={() => setIsOpen((open) => !open)}
+            className="md:hidden text-white "
+          >
+            <HiBars3 className="size-8" />
+          </div>
         </div>
-        <div className="hidden md:block md:w-[55%]">
-          <Image src={img8} width={700} height={700} alt="bos" />
+        <div className="md:flex md:px-14 md:space-x-8">
+          <div className="md:w-[45%] ">
+            {/* for mobild */}
+            <div
+              className={
+                !isOpen
+                  ? "hidden"
+                  : "right-0 top-0 h-[600px]  text-black md:text-white md:bg-transparent  bg-white p-2  w-full fixed md:hidden "
+              }
+            >
+              <div className="flex justify-between items-center pt-3 px-5">
+                <div className="md:w-[60%]">
+                  <Image
+                    src={Logo}
+                    width={700}
+                    height={300}
+                    alt="logo"
+                    className="w-64"
+                  />
+                </div>
+                <div
+                  onClick={() => setIsOpen((open) => !open)}
+                  className="md:hidden text-black "
+                >
+                  <HiBars3 className="size-8" />
+                </div>
+              </div>
+              <ul className="flex justify-end absolute right-0 flex-col ">
+                <li className=" border-y-white   hover:text-[#FCC600] mt-4 flex items-center  py-3 ]">
+                  {" "}
+                  B2B & B2C MARKETING{" "}
+                  <span>
+                    <BiPlus className="size-5 ml-2" />{" "}
+                  </span>
+                </li>
+                <li className="flex items-center mt-4 py-9 border-y-2 border-y-white  hover:text-[#FCC600]">
+                  PPC ADS{" "}
+                  <span>
+                    <BiPlus className="size-5 ml-2" />{" "}
+                  </span>{" "}
+                </li>
+                <li className="flex items-center mt-4 py-9 border-y-2 border-y-white  hover:text-[#FCC600]">
+                  GOOGLE REVIEWS{" "}
+                  <span>
+                    <BiPlus className="size-5 ml-2" />{" "}
+                  </span>{" "}
+                </li>
+                <li className="flex items-center mt-4 py-9 border-y-2 border-y-white  hover:text-[#FCC600]">
+                  PRICING{" "}
+                  <span>
+                    <BiPlus className="size-5 ml-2" />{" "}
+                  </span>{" "}
+                </li>
+                <li className="md:border-y-2 border-y-white  hover:text-[#FCC600] flex items-center mt-4 py-9">
+                  CONTACT{" "}
+                  <span>
+                    <BiPlus className="size-5 ml-2" />{" "}
+                  </span>{" "}
+                </li>
+              </ul>
+            </div>
+            <h2 className="text-4xl text-white  font-extrabold md:text-5xl mt-10 md:mt-40">
+              PROMOTE YOUR BUSINESS TO 100,000+ PEOPLE
+            </h2>
+            <p className=" text-3xl font-neon font-bold text-[#FFC600] mt-9">
+              Launch "bulk marketing" campaign in a few simple steps.
+            </p>
+            <button className="bg-[#FFC600]  px-4 py-2 rounded-full mt-5 font-semibold hover:bg-white">
+              Get Leads
+            </button>
+          </div>
+          <div className="hidden md:block md:w-[55%] md:mt-36">
+            <Image src={img8} width={700} height={700} alt="bos" />
+          </div>
         </div>
       </div>
+
       <div className="px-5">
         <div className="flex justify-center items-center mt-4">
           <p className="-mt-3">
