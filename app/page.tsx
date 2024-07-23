@@ -18,15 +18,23 @@ import img7 from "@/public/FAQ.png";
 import img8 from "@/public/Like_A_Boss_Logo_04.png";
 import { HiBars3 } from "react-icons/hi2";
 import Logo from "@/public/logo-latest-new.png";
-import { BiPlus } from "react-icons/bi";
+import { BiPhone, BiPlus } from "react-icons/bi";
 import { useState } from "react";
 import { HiX } from "react-icons/hi";
+import { FaPhone } from "react-icons/fa";
+import { CgPhone } from "react-icons/cg";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <div className="bg-[#333333] bg-cover  bg-black/90 bg-blend-overlay opacity-85 bg-fixed  bg-no-repeat  bg-hero h-[600px] md:h-[650px] px-7 pt-4 pb-36 ">
+      <div className=" fixed z-50 right-0 top-1/2 bottom-1/2 flex  items-center  group">
+        <CgPhone className="border-t-4 border-t-[#FCC600]  bg-black size-16 translate-x-44 text-white text-right px-4  py-3 transition-all duration-500 group-hover:translate-x-0" />
+        <p className="bg-[#FCC600] translate-x-44  h-16 text-black font-bold text-lg px-4 pt-4 py-3 transition-all duration-500 group-hover:translate-x-0">
+          +91 7358576526
+        </p>
+      </div>
+      <div className="bg-[#333333] bg-cover  bg-black/90 bg-blend-overlay opacity-85 bg-fixed  bg-no-repeat  bg-hero h-[600px] md:h-[900px] lg:h-[800px] px-7 pt-4 pb-36 ">
         {/* for mobile and desktop expecially */}
         <div className="flex justify-between items-center  md:px-10">
           <div className="md:w-[40%]">
@@ -746,7 +754,7 @@ export default function Home() {
       </div>
 
       <div className="mt-16">
-        <h2 className="text-4xl font-extrabold text-center">OUR - FAQ</h2>
+        <h2 className="text-4xl font-extrabold text-center">OUR - FAQs</h2>
         <p className="font-semibold text-center">
           Quickly find out if we've already addressed your queries.
         </p>
@@ -765,7 +773,7 @@ export default function Home() {
               >
                 How Authentic is your Database?
               </h2>
-              <p className="bg-slate-50 mt-3 px-3 pt-2  font-bold duration-500 transition-all cursor-pointer hidden group-hover:block group-active:block ">
+              <p className="bg-slate-50 mt-3 px-3 pt-2  font-bold  -mb-[170px] group-hover:mb-0 group-active:mb-0  transition-all cursor-pointer -translate-y-1/3 invisible group-focus:translate-y-0 group-hover:visible group-hover:translate-y-0 group-active:visible group-active:translate-y-0">
                 We have collected this data from various sources and the
                 Internet and the accuracy varies as per the category and source.
                 But we always give you the latest. We usualy hit an accuracy of
@@ -782,7 +790,7 @@ export default function Home() {
               >
                 Can we use your Data for spamming or Unsolicited phone calls?
               </h2>
-              <p className="bg-slate-50 mt-3 px-3 pt-2  font-bold duration-500 transition-all cursor-pointer hidden group-hover:block group-active:block">
+              <p className="bg-slate-50 mt-3 px-3 pt-2  font-bold  cursor-pointer  -mb-60 group-hover:mb-0 group-active:mb-0  transition-all -translate-y-1/3 invisible group-focus:translate-y-0 group-hover:visible group-hover:translate-y-0 group-active:visible group-active:translate-y-0">
                 No, our data is for Business promotion purpose only. You can not
                 send Unsolicited emails to these data. Please note that you are
                 responsible for usage of these data. We will not be held
@@ -792,17 +800,17 @@ export default function Home() {
                 action against the USER (i.e. you).
               </p>
             </div>
-            <div className="w-5/6 mx-auto mt-4 group">
+            <div className="w-5/6 mx-auto mt-4 group  ">
               <h2
                 style={{
                   background:
                     "linear-gradient(45deg, rgba(250, 198, 37, 0.9), rgba(244, 151, 7, 0.9))",
                 }}
-                className=" py-4 text-xl text-white font-semibold px-3"
+                className=" py-4 text-xl text-white font-semibold px-3 cursor-pointer"
               >
                 Can you Provide me some Sample Database ?
               </h2>
-              <p className="bg-slate-50 mt-3 px-3 pt-2  font-bold duration-500 transition-all cursor-pointer hidden group-hover:block group-active:block">
+              <p className="bg-slate-50 mt-3 px-3 pt-2  font-bold -mb-24 group-hover:mb-0 group-active:mb-0  transition-all cursor-pointer -translate-y-1/3 invisible group-focus:translate-y-0 group-hover:visible group-hover:translate-y-0 group-active:visible group-active:translate-y-0">
                 We try as much as possible not to disturb our leads. This also
                 helps maintain the freshness and authenticity of our data
               </p>
@@ -813,11 +821,11 @@ export default function Home() {
                   background:
                     "linear-gradient(45deg, rgba(250, 198, 37, 0.9), rgba(244, 151, 7, 0.9))",
                 }}
-                className=" py-4 text-xl text-white font-semibold px-3"
+                className=" py-4 text-xl text-white font-semibold px-3 cursor-pointer"
               >
                 After payment, when will I receive the database?
               </h2>
-              <p className="bg-slate-50 mt-3 px-3 pt-2  font-bold duration-500 transition-all cursor-pointer hidden group-hover:block group-active:block">
+              <p className="bg-slate-50 mt-3 px-3 pt-2  font-bold duration-500 transition-all cursor-pointer -translate-y-1/3 invisible group-focus:translate-y-0 group-hover:visible group-hover:translate-y-0 group-active:visible group-active:translate-y-0">
                 Just inform us after you've made the payment. Once it's credited
                 to our account, you will receive the data within 24 hours.
               </p>
