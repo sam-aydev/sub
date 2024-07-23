@@ -23,13 +23,67 @@ import { useState } from "react";
 import { HiX } from "react-icons/hi";
 import { FaPhone } from "react-icons/fa";
 import { CgPhone } from "react-icons/cg";
+import { sendMail } from "@/actions";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isError, setIsError] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isSuccess, setIsSuccess] = useState<null | string>(null);
+
+  const { SMTP_EMAIL } = process.env;
+
+  async function handleEmail(e: any) {
+    e.preventDefault();
+    const name = e.target[0].value;
+    const email = e.target[1].value;
+    const phoneNo = e.target[2].value;
+    const message = e.target[3].value;
+    if (!name || !email || !message) {
+      setIsError(true);
+      return;
+    }
+    console.log(name, email, message);
+    try {
+      setIsLoading(true);
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify({
+          name: name,
+          to: email,
+          subject: "Email from JobEx",
+          body: message,
+          phoneNo,
+          // from: SMTP_EMAIL,
+          // from1: email,
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        console.log(data);
+        setIsSuccess("true");
+        return;
+      } else {
+        setIsSuccess("false");
+        return;
+      }
+    } catch (error) {
+      console.log(error);
+      setIsSuccess("false");
+    } finally {
+      setIsLoading(false);
+    }
+  }
   return (
     <div>
-      <div className=" fixed z-50 right-0 top-1/2 bottom-1/2 flex  items-center  group">
-        <CgPhone className="border-t-4 border-t-[#FCC600]  bg-black size-16 translate-x-44 text-white text-right px-4  py-3 transition-all duration-500 group-hover:translate-x-0" />
+      <div
+        className={
+          isOpen
+            ? "hidden"
+            : " fixed z-50 right-0 top-1/2 bottom-1/2 flex  items-center  group"
+        }
+      >
+        <CgPhone className=" bg-black size-16 translate-x-44 text-white text-right px-4  py-3 transition-all duration-500 group-hover:translate-x-0" />
         <p className="bg-[#FCC600] translate-x-44  h-16 text-black font-bold text-lg px-4 pt-4 py-3 transition-all duration-500 group-hover:translate-x-0">
           +91 7358576526
         </p>
@@ -845,9 +899,19 @@ export default function Home() {
           Get in{" "}
           <span className="text-black text-4xl font-bold">Touch with us</span>
         </h2>
+        {isSuccess ? (
+          <p className="bg-green-700 text-center font-semibold rounded-full mt-6 -mb-4 text-white py-2 px-2 w-2/3 lg:w-1/2 mx-auto">
+            Your Message Has Been Succesfully sent!
+          </p>
+        ) : (
+          <p className="bg-red-700 text-center font-semibold rounded-full mt-6 -mb-4 text-white py-2 px-2 w-2/3 lg:w-1/2 mx-auto">
+            Error sending your message!
+          </p>
+        )}
         <form
+          onSubmit={handleEmail}
           action=""
-          className="mt-8 px-10 w-full md:flex md:space-x-8 md:px-24 md:pb-10"
+          className="mt-8 px-10 w-full  md:flex md:space-x-8 md:px-24 md:pb-10"
         >
           <div className="md:w-[50%]">
             <div>
@@ -911,7 +975,10 @@ export default function Home() {
               ></textarea>
             </div>
             <div className="flex justify-center mt-4">
-              <button className="bg-white py-1 px-3 rounded ">
+              <button
+                disabled={isLoading}
+                className="bg-white py-1 px-3 rounded "
+              >
                 Send Message
               </button>
             </div>
